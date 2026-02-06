@@ -1,4 +1,4 @@
-name: "ETL Pensioines"
+name: "ETL Pensiones"
 env: "Qa"         # Cambia el ambiente: Dev | Qa | Pre | Pro
 chunksize: 50000
 dias_retener: 2
