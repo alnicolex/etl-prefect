@@ -1,0 +1,29 @@
+# --- Python ---
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.log
+
+# --- Virtual envs ---
+.env/
+.venv/
+venv/
+env/
+*.env
+
+# --- Prefect ---
+.prefect/
+.orion/
+
+# --- IDEs ---
+.vscode/
+.idea/
+
+# --- Data & Outputs ---
+*.csv
+*.xlsx
+*.parquet
+*.zip
+/data/
+/outputs/

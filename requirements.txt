@@ -1,0 +1,28 @@
+## iniciar ambiente: cmd: start_env.bat o git: cmd.exe /c start_env.bat
+## validar entorno: python -c "import sys; print(sys.prefix)"
+## source .venv/Scripts/activate
+## eliminar entorno: rm -rf .venv
+## iniciar entorno: prefect server start
+## cerrar  entorno: virtual: deactivate
+## instalar todo con: pip install -r requirements.txt
+## version: prefect version
+## python -m flows.main_flow
+## ./build_prefect.sh
+## ejecutartrabajo especifico: prefect deployment ls
+## prefect deployment run 'Orquestador Principal/etl_pensiones'
+
+
+# --- Core ---
+prefect==3.6.2
+pandas>=2.0.0
+sqlalchemy>=2.0.0
+psycopg2-binary>=2.9.6
+
+# --- Optional: logging, config, utils ---
+python-dotenv>=1.0.0
+pyyaml>=6.0.1
+anyio>=3.7.0
+
+# --- Code quality ---
+ruff>=0.6.0
+black>=23.0.0

@@ -1,0 +1,25 @@
+name: "Heinsohn -- ETL Pensiones"
+env: "Qa"         # Cambia el ambiente: Dev | Qa | Pre | Pro
+chunksize: 50000
+dias_retener: 2
+encoding: "utf-8-sig"
+file_extension: ".csv"
+
+database:
+  host: localhost
+  port: 5432
+  dbname: my_database
+  user: my_user
+  password: my_password
+
+paths:
+  onedrive: my_path_onedrive
+  logs_dir: "./logs"
+  export_dir: "./data/output"
+  input_dir: "./data/input"
+  
+prefect:
+  log_level: INFO
+  retries: 3
+  retry_delay_seconds: 10
+  

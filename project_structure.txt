@@ -1,0 +1,30 @@
+prefect_project/
+├── flows/
+│   ├── __init__.py
+│   ├── clean_old_files.py               # Flujo auxiliar: limpia archivos antiguos
+│   └── main_flow.py                     # Orquesta y coordina todos los flujos Prefect
+│
+├── utils/
+│   ├── __init__.py
+│   ├── config.py                        # Carga configuración (YAML, JSON o .env)
+│   ├── logger_utils.py                  # Configura logging unificado Prefect/Python
+│   ├── file_cleanup.py                  # Flujo auxiliar: limpia archivos antiguos
+│   └── database_utils.py                # Conexión SQLAlchemy, helpers para queries
+│
+├── configs/
+│   ├── config.yaml                      # Parámetros globales: rutas, conexión, chunksize, etc.
+|   ├── export_table_to_csv.py           # Export file: exporta tablas pequeñas o grandes a CSV
+│   └── .env                             # Credenciales o variables privadas (no subir a git)
+│
+├── data/
+│   ├── input/                           # Archivos fuente (si aplica)
+│   └── output/                          # Exportaciones CSV
+│
+├── tests/
+│   ├── __init__.py
+│   └── test_export_flow.py              # Pruebas unitarias del flujo principal
+│
+├── build_prefect.sh                     # Script de build, lint y validación Prefect
+├── requirements.txt
+├── .gitignore
+└── README.md                            # Documentación del proyecto y comandos útiles

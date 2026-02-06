@@ -1,0 +1,9 @@
+deployments:
+  - name: etl_pensiones
+    entrypoint: flows.main_flow:orchestrate_all_flows
+    work_pool_name: etl-agent
+    schedule:
+      ##interval: 3600  # 3600 segundos = 1 hora
+      ##cron: "0 * * * *"  # cada hora, minuto 0 
+      cron: "*/20 * * * *"  # cada 20 minutos
+  
